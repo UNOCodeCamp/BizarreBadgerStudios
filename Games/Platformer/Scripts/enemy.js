@@ -6,7 +6,7 @@ function FloorHazard()
     this.width = 32;
     this.height = 32;
     this.image = new Image();
-    this.image.src = "";
+    this.image.src = "Assets/FloorFixed.png";
 
     this.draw = function()
     {
@@ -30,7 +30,7 @@ function CeilingHazard()
     this.width = 32;
     this.height = 32;
     this.image = new Image();
-    this.image.src = "";
+    this.image.src = "Assets/CeilingFixed.png";
 
     this.draw = function()
     {

@@ -14,6 +14,7 @@ renderer.draw = function()
 	//Draw game
 	scene.draw(); 
 	enemy.draw();
+	ammopack.draw();
 	player.draw();
 	hud.draw();
 };

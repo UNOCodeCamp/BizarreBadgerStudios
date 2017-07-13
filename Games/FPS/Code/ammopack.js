@@ -1,14 +1,14 @@
+var ammopack = new AmmoPack();
 
-var enemy = new Enemy();
-
-function Enemy()
+function AmmoPack()
 {
-	this.x = 0;
-	this.y = 0;
 	this.image = new Image();
-	this.image.src = ""
-	this.width = 32;
-	this.height = 32;
+	this.image.src = "Assets/Ammopack.png"
+	this.width = 64;
+	this.height = 64;
+	this.x = Math.random() * (viewport.width - this.width);
+	this.y = Math.random() * (viewport.height - this.height);
+	this.age = Date.now();
 
 	this.draw = function()
 	{
@@ -23,14 +23,11 @@ function Enemy()
 				gameObject.y <= this.y + this.height);
 	};
 
-	this.attack = function()
-	{
-
-	}
-
 	this.move = function() 
 	{
-
+		this.age = Date.now();
+		this.x = Math.random() * (viewport.width - this.width);
+		this.y = Math.random() * (viewport.height - this.height);
 	}
 
 }

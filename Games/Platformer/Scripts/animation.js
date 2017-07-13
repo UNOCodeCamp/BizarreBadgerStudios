@@ -6,7 +6,7 @@ function Animation(imageArray)
     for ( i in imageArray ) 
     {
         var image = new Image();
-        image.src = imgsrc;
+        image.src = imageArray[i];
         this.sequence.push(image ); 
             
     }
@@ -16,7 +16,7 @@ function Animation(imageArray)
         var index = this.frameIndex;
         
         var now = Date.now();
-        if(now - this.startTime > 75){
+        if(now - this.startTime > 125){
             this.frameIndex = (index + 1) % this.sequence.length;
             this.startTime = now;
         }

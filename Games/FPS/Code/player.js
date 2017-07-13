@@ -3,9 +3,10 @@ player = new Object();
 player.x = null;
 player.y = null;
 player.image = new Image();
-player.image.src = "";
-player.width = 32;
-player.height = 32;
+player.image.src = "Assets/Aimer.png";
+player.width = 64;
+player.height = 64;
+player.isAttacking = false;
 
 
 player.draw = function()
@@ -31,5 +32,7 @@ player.move = function(x, y)
 
 player.attack = function()
 {
-
+	
+	player.isAttacking = true;
+	game.ammo -= 1
 };
