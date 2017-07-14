@@ -35,14 +35,6 @@ game.update = function()
     player.move(input.x, input.y);
     if (exit.isTouching(player))
     {   
-        var number = document.getElementById("text");
-        number.addEventListener("text", game.level);
-        
-        if(number == game.level)
-        {
-            scene.setScene(level);
-        }
-        
         game.level++;
         if (game.level < maps.length)
         {
