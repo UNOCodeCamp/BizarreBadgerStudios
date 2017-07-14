@@ -4,7 +4,7 @@ game.score = 0;
 game.missed = 0;
 game.hit = 0;
 game.ammo = 75;
-game.timer = 30
+game.timer = 30;
 game.startTime = Date.now();
 game.timerend = Date.now();
 
@@ -18,7 +18,7 @@ game.start = function()
 // The main game loop
 game.main = function() 
 { 
-	if(game.ammo >= 0 && game.missed < 20)
+	if(game.ammo >= 0 && game.missed < 20 && game.timer > 0)
 	{
 	game.update();
 	renderer.draw();
